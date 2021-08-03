@@ -7,5 +7,7 @@
 <p> 4. go to http://localhost:8000</p>
 
 ![](preview/1.png)
+<img src=preview/2.png alt="Italian Trulli">
+
 
 Django +HTML + Bootstap + sqlite
