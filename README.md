@@ -5,6 +5,7 @@
 <p> 2. copy file in env box and ativate </p>
 <p> 3. go to Django path and runserver (python mange.py runserver)</p>
 <p> 4. go to http://localhost:8000</p>
+<p> 5. Username and Password Django admin/Password</p>
 
 ![](preview/1.png)
 <img src=preview/2.png alt="Italian Trulli">
