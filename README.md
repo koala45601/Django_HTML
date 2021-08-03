@@ -8,6 +8,4 @@
 
 ![](preview/1.png)
 
-https://github.com/koala45601/Django_HTML/blob/master/preview/._1.png
-
 Django +HTML + Bootstap + sqlite
