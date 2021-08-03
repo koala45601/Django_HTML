@@ -1,0 +1,38 @@
+{% extends 'Layout.html' %}
+
+{% block Content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- The form -->
+<center><form class="example" method="POST" autocomplete="off"><br>
+    {% csrf_token %}
+  <input type="text" placeholder="Search Stock ID" name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form></center>
+
+<div class="container">
+  <br><br><center>
+
+  {% if check == 'Found'%}
+    {% if result.img %}
+        <div class="container" style="margin-top: 20px; margin-bottom: 20px">
+            <img src="{{result.img.url}}" width="200">
+        </div>
+    {% else %}
+        <div class="container" style="margin-top: 20px; margin-bottom: 20px">
+          <img src="../media/stock_img/defalut.jpg" width="200">
+      </div>
+    {% endif %}
+    <div class="container" style="text-align: left">
+    <br><p>Stock ID : {{result.Stock_ID}} </p>
+    <p> NAME : {{result.Stock_name}}</p>
+  {% elif check == 'Not Found'%}
+  <br><p>Not Found ID Please input agin</p>
+  {% else %}
+  <br>
+    <p>Please input ID</p>
+  {%endif%}
+</center>
+</div>
+
+{%endblock%}

@@ -1,0 +1,31 @@
+{%extends 'Layout.html'%}
+{%block Content%}
+<div class="container">
+{%if user.profile.img_profile %}
+{% csrf_token %}
+        <img src="{{user.profile.img_profile.url}}" width="200px" class="rounded-circle"/>
+{%endif %}
+</div>
+<form  method="post" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="form-group" >
+        <label for="">name</label>
+        <input type="text" class="form-control" placeholder="Name" name="name_1" value="{{data.first_name}}">
+</div>
+<div class="form-group">
+        <label for="">lastname</label>
+        <input type="text" class="form-control" placeholder="LastName" name="lastname_1" value="{{data.last_name}}">
+</div>
+<div class="form-group">
+    <label for="">Email</label>
+    <input type="text" class="form-control" placeholder="Email" name="email" value="{{data.email}}"><br>
+</div>
+
+<div>
+    <label>Select Image Profile</label>
+    <input type="file" id="image_1" name="image_1" ><br>
+</div>
+    <input type="submit" value="SAVE" class="btn btn-primary">
+</form> 
+
+{%endblock%}

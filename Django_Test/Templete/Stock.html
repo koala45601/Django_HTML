@@ -1,0 +1,42 @@
+{%extends 'Layout.html' %}
+
+{%block Content%}
+<center>
+
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+</style>
+ <center>
+<table> 
+    <tr>
+      <th align="center">Stock ID</th>
+      <th>Stock name</th>
+      <th>Category</th>
+      <th>quantity</th>
+      <th>Remark</th>
+    </tr>
+    {%for x in Stock_show%}
+    <tr>
+        <td>{{x.Stock_ID}}</td>
+        <td>{{x.Stock_name}}</td>
+        <td>{{x.category}}</td>
+        <td>{{x.socrce}}</td>
+        <td>{{x.Stock_remark}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</center>
+{%endblock%}

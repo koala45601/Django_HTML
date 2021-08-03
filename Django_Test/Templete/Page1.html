@@ -1,0 +1,54 @@
+{%extends 'Layout.html'%}
+
+{%block Content%}
+
+<h1 align="center">Add Stock</h1>
+<!-- <form action="add" method="get"> get method
+    <div class="form-group">
+            <label for="">NAME-LastName</label>
+            <input type="text" class="form-control" name="name">
+    </div>
+    <div class="form-group">
+            <label for="">User</label>
+            <input type="text" class="form-control" name="user">
+    </div>
+    <div class="form-group">
+        <label for="">Password</label>
+        <input type="text" class="form-control"  name="password">
+    </div>
+    <input type="submit" value="ADD USER" class="btn btn-primary">
+</form> -->
+
+<form  method="POST"  enctype="multipart/form-data" autocomplete="off" >
+    
+    {% csrf_token %}
+<div class="form-group" autocomplete="off">
+    <label for="">Stock Name</label>
+    <input type="text" class="form-control" name="s_name">
+</div>
+<div class="form-group" >
+    <label for="">ID Stock</label>
+    <input type="number" min="0" class="form-control" name="s_id">
+</div>
+<div class="form-group">
+    <label for="">Category</label>
+    <select id="Category" name="Cat">
+        <option value="Meet">Meet</option>
+        <option value="Farm">Farm</option>
+        <option value="Tools">Tools</option>
+        <option value="Book">Book</option>
+      </select>
+</div>
+<div class="form-group">
+    <label for="">quantity</label>
+    <input type="text" class="form-control"  name="s_count">
+</div>
+<div class="form-group">
+    <label for="">Remark</label>
+    <input type="text" class="form-control"  name="rem_1">
+</div>
+    <center><input type="submit" value="SUBMIT" class="btn btn-primary"></center>
+
+</form>
+
+{%endblock%}

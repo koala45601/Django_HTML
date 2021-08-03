@@ -1,0 +1,22 @@
+{%extends 'Layout.html'%}
+{%block Content%}
+
+<form method="post" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label > Document Name </label>
+        <input type="text" class="form-control" Name="doc_name">
+    </div>
+    <div>
+        <label>Select Document</label>
+        <input type="file" id="doc_up_1" name="doc_up" accept="PDF"><br>
+    </div>
+    <div class="form-group">
+        <label for="">Effective Date</label>
+        <input type="date" name='eff_date' placeholder="dd-mm-yyyy" value="" min='1990-01-01' max='2500-01-01'>
+    </div>
+    <input type="submit" value='SUBMIT' class="btn btn-primary">
+</form>
+
+
+{%endblock%}
